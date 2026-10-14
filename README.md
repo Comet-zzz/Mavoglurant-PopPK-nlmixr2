@@ -29,4 +29,5 @@ The analysis uses the built-in `mavoglurant` dataset from the `nlmixr2data` pack
 1. Install R and RStudio.
 2. Install the required packages:
    ```R
-   install.packages(c("nlmixr2", "nlmixr2data", "knitr"))
+3. install.packages(c("nlmixr2", "nlmixr2data", "knitr"))
+Source the script Mavoglurant_PopPK_Model.R. The script will automatically load the data, fit the models, print the OFV comparison, and export the final parameter table to CSV.
