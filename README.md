@@ -101,12 +101,14 @@ model fit and no obvious bias.
    install.packages(c("nlmixr2", "nlmixr2data", "knitr"))
    ```
 
-3. Source `Mavoglurant_PopPK_Model.R`. The script loads the data, fits the base and allometric
-   models, prints the OFV comparison, and exports the final parameter table to CSV.
+3. Source `Mavoglurant_PopPK_Model.R`. The script loads the data, fits the base, weight, weight+age,
+   and final allometric models, prints all intermediate OFV comparisons, and exports the final
+   parameter table to CSV.
 
 ## Notes
 
-- The script reproduces the two models compared above (base and final allometric). The intermediate
-  covariate-screening steps are summarized in the results rather than kept as separate scripts.
+- The script implements the full stepwise covariate screening workflow: base model → weight effect
+  estimation → age effect estimation → final model with standard allometric scaling. All
+  intermediate OFV comparisons are printed in the console upon sourcing.
 - The script rescales the observed concentrations (DV divided by 1000) before fitting; the
   estimates above are reported in the model's native units.
