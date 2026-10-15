@@ -46,12 +46,19 @@ The analysis uses the built-in `mavoglurant` dataset from the `nlmixr2data` pack
 | Model | OFV | ΔOFV |
 | --- | --- | --- |
 | Base (no covariates) | −8257.77 | — |
-| Allometric scaling (WT) | −8297.93 | **40.16** |
+| + Weight on CL | −8275.80 | 18.03 (vs base) |
+| + Weight and age on CL | −8275.79 | −0.007 (vs weight) |
+| Final allometric scaling | −8297.93 | 40.16 (vs base) |
 
-- **Weight effect:** allometric scaling improved the fit substantially (ΔOFV = 40.16, well above
-  the 3.84 threshold for 1 df, p < 0.05), so body weight is a significant covariate on clearance.
-- **Age effect:** adding AGE on top of the weight model gave ΔOFV ≈ 0, indicating age is not a
+- **Weight effect:** adding a single estimated weight effect on clearance significantly improved the
+  fit (ΔOFV = 18.03, 1 df, p < 0.001), so body weight is a significant covariate on CL.
+- **Age effect:** adding AGE on top of the weight model gave ΔOFV = −0.007, indicating age is not a
   significant covariate for mavoglurant clearance in this dataset, so it was not retained.
+- **Final model:** standard allometric scaling (CL and Q scaled to WT<sup>0.75</sup>, V1 and V2 to
+  WT<sup>1.0</sup>) lowered the objective function to −8297.93 (ΔOFV = 40.16 vs the base model).
+  Because the exponents are fixed, this step adds no estimated parameters, so the OFV drop is not a
+  likelihood-ratio test; it reflects the gain from the physiologically based scaling rather than from
+  fitting an additional covariate.
 
 ### Final parameter estimates
 
