@@ -81,8 +81,8 @@ model fit and no obvious bias.
 
 | File | Description |
 | --- | --- |
-| `Mavoglurant_PopPK_Model.R` | Main R script: base model, allometric scaling model, OFV comparison, and final parameter table export. |
-| `Mavoglurant_Final_Model_Summary.csv` | Final model parameter estimates, standard errors, %RSE, and OFV comparison. |
+| `Mavoglurant_PopPK_Model.R` | Main R script: base model, stepwise covariate screening (weight, weight+age), final allometric scaling model, and final parameter table export. |
+| `Mavoglurant_Final_Model_Summary.csv` | Final model parameter estimates, standard errors, and %RSE (intermediate OFV comparisons are printed to the console). |
 | `Mavoglurant_GOF_DV_vs_IPRED.png` | Goodness-of-fit plot for the final model (DV vs. IPRED). |
 
 ## Environment & dependencies

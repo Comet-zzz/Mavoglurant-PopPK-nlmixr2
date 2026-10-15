@@ -39,7 +39,7 @@ wt_model <- function() {
 fit_wt <- nlmixr2(wt_model, mavoglurant, est = "focei")
 cat("[Weight Model] OFV:", fit_wt$objf, "\n")
 cat("[Weight Model] Delta OFV (vs Base):", fit_base$objf - fit_wt$objf, "\n")
-cat("[Weight Model] Estimated WT exponent:", exp(fit_wt$parFixedDf["beta_wt_cl", "Estimate"]), "\n")
+cat("[Weight Model] Estimated WT exponent:", fit_wt$parFixedDf["beta_wt_cl", "Estimate"], "\n")
 cat("[Weight Model] WT exponent %RSE:", fit_wt$parFixedDf["beta_wt_cl", "%RSE"], "%\n")
 
 # Add age effect on top of weight
